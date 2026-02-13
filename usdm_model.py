@@ -34,10 +34,10 @@ def user_mod(id_task, props, sig0, deps, stvar0):
         
         # Cálculo das constantes elásticas conforme o manual [cite: 116, 117, 118]
         # Atenção: nu deve ser menor que 0.5 para evitar divisão por zero [cite: 117]
-        G = 0.5 * E / (1.0 + nu) [cite: 116]
-        fac = 2.0 * G / (1.0 - 2.0 * nu) [cite: 117]
-        term1 = fac * (1.0 - nu) [cite: 117]
-        term2 = fac * nu [cite: 118]
+        G = 0.5 * E / (1.0 + nu) #[cite: 116]
+        fac = 2.0 * G / (1.0 - 2.0 * nu) #[cite: 117]
+        term1 = fac * (1.0 - nu) #[cite: 117]
+        term2 = fac * nu #[cite: 118]
         
         # Inicialização da matriz 6x6 [cite: 39, 135]
         D = np.zeros((6, 6))
@@ -135,6 +135,7 @@ deps = np.array([0.0, -0.0001, 0.0, 0.0, 0.0, 0.0]) # Deformação em YY (vertic
 # Listas para armazenar resultados do gráfico
 deformacoes = []
 tensoes_deviatorias = []
+
 
 # --- EXECUÇÃO DO PASSO A PASSO (SIMULANDO O PLAXIS) ---
 for i in range(200):
