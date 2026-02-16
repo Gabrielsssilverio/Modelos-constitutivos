@@ -1,5 +1,5 @@
 ! ==========================================================
-! MODELO UDSM MOHR-COULOMB (USP) - VERSAO FINAL SEM ERROS
+! MODELO MOHR-COULOMB - VERSAO FINAL
 ! ==========================================================
 
 SUBROUTINE USER_MOD(IDTask, iMod, IsUndr, iStep, iTer, Iel, Int, X, &
@@ -84,7 +84,7 @@ SUBROUTINE GETMODELNAME(iModel, Name)
     !GCC$ ATTRIBUTES DLLEXPORT, STDCALL :: GETMODELNAME
     INTEGER, INTENT(IN) :: iModel
     CHARACTER(LEN=256), INTENT(OUT) :: Name
-    Name = CHAR(11) // "MC_USP_UDSM"
+    Name = CHAR(11) // "MC_UDSM"
 END SUBROUTINE GETMODELNAME
 
 SUBROUTINE GETPARAMCOUNT(iModel, C)
